@@ -128,7 +128,14 @@ def _patched_load_torch_file(orig_func):
             return orig_func(ckpt, *args, **kwargs)
 
         try:
-            from backend.operations_gguf import ParameterGGUF, quants_mapping
+            import backend.operations_gguf as _ogguf
+            ParameterGGUF = _ogguf.ParameterGGUF
+            quants_mapping = (
+                getattr(_ogguf, "QUANTS_MAPPING", None)
+                or getattr(_ogguf, "quants_mapping", None)
+            )
+            if quants_mapping is None:
+                raise ImportError("no QUANTS_MAPPING / quants_mapping found")
         except Exception as e:
             _diag(f"falling back to default loader: {e}")
             return orig_func(ckpt, *args, **kwargs)
