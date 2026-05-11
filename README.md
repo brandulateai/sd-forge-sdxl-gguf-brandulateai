@@ -38,8 +38,8 @@ After restart, your SDXL `.gguf` files appear in the checkpoint dropdown. Pick o
 
 ## Requirements
 
-- Forge or Forge Neo
-- Python 3.10+
+- Forge / Forge Neo. Recommended: [Haoming02/sd-webui-forge-classic](https://github.com/Haoming02/sd-webui-forge-classic) (default `neo` branch — actively maintained, ships with Kolors, Ernie, etc. built in).
+- Python 3.11+ (older Forge builds may still work with 3.10)
 
 ## Support our work
 
@@ -54,4 +54,4 @@ MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
-[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) · [Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge) · [llama.cpp](https://github.com/ggml-org/llama.cpp)
+[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) · [Forge (Haoming02)](https://github.com/Haoming02/sd-webui-forge-classic) · [Forge (lllyasviel, original)](https://github.com/lllyasviel/stable-diffusion-webui-forge) · [llama.cpp](https://github.com/ggml-org/llama.cpp)
