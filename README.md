@@ -14,17 +14,26 @@ Bundled GGUFs (UNet + CLIP + VAE in one file) and UNet-only GGUFs both work.
 
 ## Install
 
-### Forge Extensions tab (recommended)
+### Step 1 — Get Forge (skip if you already have it)
 
-1. Open the **Extensions** tab → **Install from URL**
+**Recommended:** [Haoming02/sd-webui-forge-classic](https://github.com/Haoming02/sd-webui-forge-classic) (default `neo` branch).
+
+This is the actively maintained continuation of Forge. Includes built-in support for newer models (Kolors, Ernie, Wan, etc.) and is the only Forge build this extension is regularly tested against. The original lllyasviel/stable-diffusion-webui-forge has been inactive since mid-2025 and is not recommended for new installs.
+
+Requires **Python 3.11+**.
+
+### Step 2 — Install this extension
+
+**Via Forge UI (recommended):**
+
+1. Open Forge → **Extensions** tab → **Install from URL**
 2. Paste:
    ```
    https://github.com/brandulateai/sd-forge-sdxl-gguf-brandulateai
    ```
-3. Click **Install**
-4. Go to **Installed** → **Apply and restart UI**
+3. Click **Install** → go to **Installed** → **Apply and restart UI**
 
-### Manual
+**Or manually:**
 
 ```bash
 cd <your-forge>/extensions
@@ -34,12 +43,7 @@ Then restart Forge.
 
 ## Use
 
-After restart, your SDXL `.gguf` files appear in the checkpoint dropdown. Pick one and generate.
-
-## Requirements
-
-- Forge / Forge Neo. Recommended: [Haoming02/sd-webui-forge-classic](https://github.com/Haoming02/sd-webui-forge-classic) (default `neo` branch — actively maintained, ships with Kolors, Ernie, etc. built in).
-- Python 3.11+ (older Forge builds may still work with 3.10)
+Drop any SDXL `.gguf` file into `<your-forge>/models/Stable-diffusion/`. After restart it appears in the checkpoint dropdown — pick it and generate.
 
 ## Support our work
 
